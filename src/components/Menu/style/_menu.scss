@@ -1,0 +1,58 @@
+@mixin flex ($flexdirection: row, $justifycontent: center, $alignitem: center, $flexwrap: nowrap) {
+    display: flex;
+    flex-direction: $flexdirection;
+    justify-content: $justifycontent;
+    align-items: $alignitem;
+    flex-wrap: $flexwrap;
+}
+
+.wrap {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 3rem;
+}
+
+.row1 {
+    @include flex(row, space-between, center);
+    max-height: 130px;
+
+
+    .btn {
+        @include flex(row, center, center);
+        border: 1px solid;
+        padding: 2rem;
+        font-size: 1.6rem;
+        width: 14rem;
+        height: 2rem;
+        transition: all 500ms;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+
+    }
+
+    .title {
+        font-size: 7rem;
+        font-weight: 600;
+        margin: 0;
+    }
+
+    .menu {
+        font-size: 2.5rem;
+        font-weight: 700;
+        width: 14rem;
+        text-align: center;
+
+    }
+}
+
+.row2 {
+    @include flex(center, center);
+
+    .sub {
+        font-size: 2rem;
+    }
+
+}

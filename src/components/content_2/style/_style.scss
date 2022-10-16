@@ -1,0 +1,46 @@
+@import "../../../mixins";
+
+.cont_wrap {
+  margin-top: 5rem;
+}
+
+.cont2_head {
+  font-size: 2.5rem;
+}
+
+.tile {
+  img {
+    width: 100%;
+  }
+}
+
+.cont2_body {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin-top: 5rem;
+  gap: 3rem;
+  @include breakpoint(1000px) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @include breakpoint(600px) {
+    grid-template-columns: 1fr;
+  }
+  .date {
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+  }
+
+  .text {
+    font-size: 2.2rem;
+    margin-top: 2rem;
+    max-width: 250px;
+    font-weight: 700;
+    margin-left: 1rem;
+
+    &:hover {
+      color: rgb(216, 34, 34);
+    }
+  }
+}
